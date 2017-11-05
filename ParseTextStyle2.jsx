@@ -413,12 +413,8 @@ function collectLayersByMixedAPI(layers)
 		{
 			if(layers[i].kind == LayerKind.TEXT)
 			{
-                var layer = doc.activeLayer;
-                if(layer.kind != LayerKind.TEXT)
-            {
-                continue;
-            }
-				app.activeDocument.activeLayer = layers[i];
+                var layer =  layers[i];
+			  doc.activeLayer = layer;
                 var layerDesc = getActiveLayerDescriptor();
                 
                 
